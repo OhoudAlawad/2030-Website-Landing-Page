@@ -164,6 +164,11 @@ object-fit: cover;
       .justify-content-end {
         justify-content: unset !important;
       }
+      .team_section
+        img {
+            max-width: 100%;
+          }
+      
 }
 
 @media(max-width:768px){
