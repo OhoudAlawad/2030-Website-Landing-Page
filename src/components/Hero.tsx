@@ -63,7 +63,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-tr from-emerald-brand/20 to-gold-accent/20 rounded-3xl rotate-3 dark:from-emerald-brand/10 dark:to-gold-accent/10 -z-10 blur-sm" />
             <div className="absolute inset-0 bg-theme-background border border-emerald-brand/10 dark:border-emerald-light/10 rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/hero_vision.png"
+                src={`${process.env.NODE_ENV === 'production' ? '/2030-Website-Landing-Page' : ''}/images/hero_vision.png`}
                 alt="Saudi Vision 2030 Majestic Modern Illustration"
                 fill
                 priority

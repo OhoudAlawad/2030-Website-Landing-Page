@@ -8,32 +8,34 @@ import { ExternalLink } from "lucide-react";
 export default function Projects() {
   const { t, isRtl } = useLanguage();
 
+  const basePath = process.env.NODE_ENV === 'production' ? '/2030-Website-Landing-Page' : '';
+
   const projectList = [
     {
       title: t.projects.neom.title,
       desc: t.projects.neom.desc,
-      image: "/images/neom.png",
+      image: `${basePath}/images/neom.png`,
       link: "https://www.neom.com",
       badge: isRtl ? "المستقبل الذكي" : "Smart Future",
     },
     {
       title: t.projects.redSea.title,
       desc: t.projects.redSea.desc,
-      image: "/images/red_sea.png",
+      image: `${basePath}/images/red_sea.png`,
       link: "https://www.redseaglobal.com",
       badge: isRtl ? "سياحة متجددة" : "Regenerative Eco-Tourism",
     },
     {
       title: t.projects.qiddiya.title,
       desc: t.projects.qiddiya.desc,
-      image: "/images/qiddiya.png",
+      image: `${basePath}/images/qiddiya.png`,
       link: "https://qiddiya.com",
       badge: isRtl ? "عاصمة الترفيه" : "Entertainment & Sports",
     },
     {
       title: t.projects.diriyah.title,
       desc: t.projects.diriyah.desc,
-      image: "/images/diriyah.png",
+      image: `${basePath}/images/diriyah.png`,
       link: "https://www.diriyah.sa",
       badge: isRtl ? "جوهرة التراث" : "Heritage Jewel",
     },
