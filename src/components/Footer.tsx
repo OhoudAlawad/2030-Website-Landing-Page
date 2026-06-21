@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useLanguage } from "./LanguageContext";
-import { Globe, Heart } from "lucide-react";
+import { Heart } from "lucide-react";
 
 export default function Footer() {
   const { t, isRtl } = useLanguage();

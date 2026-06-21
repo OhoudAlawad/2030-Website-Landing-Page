@@ -5,7 +5,7 @@ import { useLanguage } from "./LanguageContext";
 import { Globe, Sun, Moon, Menu, X } from "lucide-react";
 
 export default function Header() {
-  const { language, t, toggleLanguage, isRtl } = useLanguage();
+  const { language, t, toggleLanguage } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true); // Default to Dark Mode for premium aesthetics
 

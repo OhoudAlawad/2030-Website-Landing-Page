@@ -1,6 +1,35 @@
 import type { Metadata } from "next";
 import { LanguageProvider } from "@/components/LanguageContext";
+import { Almarai, Inter, Outfit, Tajawal } from "next/font/google";
 import "./globals.css";
+
+const almarai = Almarai({
+  subsets: ["arabic"],
+  weight: ["300", "400", "700", "800"],
+  variable: "--font-almarai",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-outfit",
+  display: "swap",
+});
+
+const tajawal = Tajawal({
+  subsets: ["arabic"],
+  weight: ["300", "400", "500", "700", "800", "900"],
+  variable: "--font-tajawal",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ohoudalawad.github.io/2030-Website-Landing-Page/"),
@@ -36,16 +65,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" dir="rtl" className="h-full antialiased scroll-smooth">
-      <head>
-        {/* Modern Typography from Google Fonts */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html
+      lang="ar"
+      dir="rtl"
+      className={`${inter.variable} ${tajawal.variable} ${outfit.variable} ${almarai.variable} h-full antialiased scroll-smooth`}
+    >
       <body className="min-h-full flex flex-col antialiased">
         <LanguageProvider>{children}</LanguageProvider>
       </body>

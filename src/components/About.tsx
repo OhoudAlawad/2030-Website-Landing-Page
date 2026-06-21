@@ -5,7 +5,7 @@ import { useLanguage } from "./LanguageContext";
 import { Award, Compass, Heart, Shield } from "lucide-react";
 
 export default function About() {
-  const { t, isRtl } = useLanguage();
+  const { isRtl } = useLanguage();
 
   const metrics = [
     {
